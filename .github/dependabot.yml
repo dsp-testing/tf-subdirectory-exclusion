@@ -1,0 +1,22 @@
+version: 2
+updates:
+  - package-ecosystem: terraform
+    directory: "/"
+    terraform:
+      type: terraform-registry
+      url: https://registry.terraform.io/
+      token: ""
+    schedule:
+      interval: daily
+    commit-message:
+      prefix: feat
+  - package-ecosystem: terraform
+    directory: "/examples/basic"
+    terraform:
+      type: terraform-registry
+      url: https://registry.terraform.io/
+      token: ""
+    schedule:
+      interval: daily
+    commit-message:
+      prefix: test
